@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BioShphere</title>
+</head>
+<body class="bg-blue-200">
+    <!-- navbar login -->
+    <nav id="navbar" class="bg-white fixed w-full flex items-center justify-between z-50 py-3 top-0 left-0">
+        <div class="min320:ml-4 min410:ml-6">
+            <img src="">
+        </div>
+        <div class="flex justify-center items-center min320:mr-6 min360:mr-8 min410:mr-18 xl:mr-16">
+            <p class="font-bold min320:text-md lg:text-xl text-center">Selamat Datang<br>di BioShphere!</p>
+        </div>
+    </nav>
+
+    <div class="flex flex-col mt-32 min320:px-4 lg:px-16">
+        <p class="min320:text-3xl min360:text-5xl min410:text-6xl lg:text-8xl text-blue-700 font-bold">Sistem<br>Imun</p>
+        <p class="min320:text-md min360:text-lg lg:text-3xl text-black font-bold">Jelajahi Dunia Sistem Imun dengan<br>Berbagai Representasi</p>
+    </div>
+    <hr class="mt-4 mb-4">
+    <div class="flex flex-col mt-4 justify-center items-center">
+        <p class="font-semibold text-sm mb-1">Klik disini untuk mulai!</p>
+        <button onclick="start()" class="bg-blue-500 text-white min320:text-md lg:text-2xl font-bold border-b-4 border-r-2 border-gray-900 px-9 py-3 rounded-xl hover:bg-blue-600">START</button>
+    </div>
+
+    <script>
+        function start() {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

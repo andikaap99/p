@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BioShphere</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav id="navbar" class="bg-blue-200 fixed w-full flex items-center justify-between z-50 py-3 top-0 left-0">
+        <div class="min320:ml-4 min410:ml-6">
+            <button id="menu-btn" class="lg:hidden text-white text-3xl">
+                ☰
+            </button>
+        </div>
+        <div class="min320:ml-4 min410:ml-6">
+            <img src="Images/Logo/logo.png" class="min320:w-32 lg:w-1/5">
+        </div>
+        <div class="flex w-1/4 hidden lg:block">
+            <p class="font-bold min320:text-md lg:text-xl text-center">Selamat Datang<br>di BioShphere!</p>
+        </div>
+        <div class="flex justify-center items-center min320:mr-2 min360:mr-3 min410:mr-4 xl:mr-16">
+            <button onclick="logout()" class="px-3 py-1">
+                <img src="Images/Icon/exit.png" alt="Logout" class="min320:w-6 min320:h:2 min360:w-8 min360:h-2 xl:w-16">
+            </button>
+        </div>
+    </nav>
+    <div id="container" class="min320:mt-22 min360:mt-22 min410:mt-20 max-w-screen h-screen">
+        <!-- sidebar desktop -->
+        <aside class="w-64 mt-3 left-0 overflow-y-auto h-screen bg-white fixed hidden lg:block">
+            <ul class="py-2 px-2">
+                <li class="">
+                    <p class="block flex p-2 text-black text-lg font-bold ">
+                        Daftar Isi
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('pretest.html')">
+                        Pre-Test
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('pendahuluan.html')">
+                        Pendahuluan
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('pengertian_sistem_imun.html')">
+                        Pengertian Sistem Imun
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('fungsi_sistem_imun.html')">
+                        Fungsi Sistem Imun
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('organ_sistem_imun.html')">
+                        Organ Sistem Imun
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('mekanisme_sistem_imun.html')">
+                        Mekanisme Sistem Imun Spesifik & Non-Spesifik
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('faktor_sistem_imun.html')">
+                        Faktor yang Mempengaruhi Sistem Imun
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('pencegahan_sistem_imun.html')">
+                        Pencegahan & Gangguan Sistem Imun
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('posttest.html')">
+                        Post-Test
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('daftar_pustaka.html')">
+                        Daftar Pustaka
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('profil.html')">
+                        Profil Pembuat
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- sidebar mobile -->
+        <aside id="sidebar" class="w-full h-screen bg-white fixed min320:mt-20 min360:mt-22 min410:mt-22 top-0 left-0 slide-out overflow-y-auto">
+            <ul class="py-2 px-2">
+                <li class="">
+                    <p class="block flex p-2 text-black text-lg font-bold ">
+                        Daftar Isi
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('pretest.html')">
+                        Pre-Test
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('pendahuluan.html')">
+                        Pendahuluan
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('pengertian_sistem_imun.html')">
+                        Pengertian Sistem Imun
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('fungsi_sistem_imun.html')">
+                        Fungsi Sistem Imun
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('organ_sistem_imun.html')">
+                        Organ Sistem Imun
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('mekanisme_sistem_imun.html')">
+                        Mekanisme Sistem Imun Spesifik & Non-Spesifik
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('faktor_sistem_imun.html')">
+                        Faktor yang Mempengaruhi Sistem Imun
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('pencegahan_sistem_imun.html')">
+                        Pencegahan & Gangguan Sistem Imun
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('posttest.html')">
+                        Post-Test
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('daftar_pustaka.html')">
+                        Daftar Pustaka
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="block flex p-2 text-black font-semibold hover:bg-gray-400 rounded transition" onclick="loadContent('profil.html')">
+                        Profil Pembuat
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <main id="main" class="lg:ml-64">
+            <div id="content" class="h-full mt-20">
+                <div class="flex flex-col items-center justify-center text-justify mb-6 md:mt-20 min320:px-10 min360:px-8 md:px-20 lg:px-40">
+                    <div class="mt-4">
+                        <p class="min320:text-md min360:text-md min410:text-lg md:text-lg text-align mb-4 lg:mt-6">
+                            Silakan isi pre-test ini dengan cermat dan sesuai dengan pemahaman Anda. Pre-test ini
+                            bertujuan untuk mengukur pengetahuan awal Anda tentang sistem pertahanan tubuh sebelum
+                            memulai pembelajaran. Jawablah setiap pertanyaan dengan sebaik mungkin. Tidak perlu
+                            khawatir jika ada pertanyaan yang belum Anda ketahui jawabannya, karena hasil ini akan
+                            digunakan sebagai bahan evaluasi untuk meningkatkan proses pembelajaran. Semangat
+                            mengerjakan! 
+                        </p>
+                        <div class="bg-red-500 border-2 border-whtie rounded-xl min320:mb-4 mt-4 px-4 py-2 hover:bg-red-700">
+                            <a href="https://forms.gle/2x6Wa1QTAoKvECj69" class="min320:text-sm min320:text-md min410:text-lg text-center md:text-lg font-bold text-white">
+                                Learning Outcome
+                            </a>
+                        </div>
+                        <div class="bg-green-500 border-2 border-whtie rounded-xl min320:mb-4 px-4 py-2 hover:bg-green-700">
+                            <a href="https://forms.gle/RxoNevykN4tzBKva9" class="min320:text-sm min320:text-md min410:text-lg text-center md:text-lg font-bold text-white">
+                                Critical Thinking
+                            </a>
+                        </div>
+                        <div class="bg-yellow-500 border-2 border-whtie rounded-xl min320:mb-4 px-4 py-2 hover:bg-yellow-700">
+                            <a href="https://forms.gle/XDJ79rrb7jmep81k9" class="min320:text-sm min320:text-md min410:text-lg text-center md:text-lg font-bold text-white">
+                                Problem Solving
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

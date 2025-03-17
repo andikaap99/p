@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>BioShphere</title>
+</head>
+<body class="flex items-center justify-center h-screen">
+    <nav id="navbar" class="bg-white fixed w-full flex items-center justify-between z-50 py-3 top-0 left-0">
+        <div class="min320:ml-4 min410:ml-6">
+            <img src="">
+        </div>
+        <div class="flex justify-center items-center min320:mr-6 min360:mr-8 min410:mr-18 xl:mr-16">
+            <p class="font-bold min320:text-md lg:text-xl text-center">Selamat Datang<br>di BioShphere!</p>
+        </div>
+    </nav>
+
+    <div class="flex flex-col justify-center items-center p-8 rounded-lg shadow-lg w-80 border border-blue-900 shadow-xl" style="background-color: rgba(255, 255, 255, 0.5);">
+        <h2 class="text-2xl font-bold text-blue-900 text-center mb-6">Login</h2>
+        <img src="Images/Icon/user-blue.png" class="min320:w-20 min410:w-40 lg:w-50 mb-3 p-2 border border-blue-950 rounded-3xl">
+        <input id="username" type="text" placeholder="Nama" class="w-full p-2 mb-4 border-2 border-blue-600 rounded-lg">
+        <input id="password" type="password" placeholder="Password" class="w-full p-2 mb-4 border-2 border-blue-600 rounded-lg">
+        <button onclick="login()" class="w-full bg-blue-800 text-white p-2 rounded-lg hover:bg-blue-900">Login</button>
+        <p id="error" class="text-red-500 text-center mt-4 hidden">Kode akses salah!</p>
+    </div>
+
+    <script>
+        const correctPassword = "biologi";
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const error = document.getElementById('error');
+
+            if (password === correctPassword) {
+                alert(`Selamat datang, ${username}!`);
+                localStorage.setItem('isLoggedIn', 'true'); // Simpan status login
+                window.location.href = 'menu_utama.html';
+            } else {
+                error.classList.remove('hidden');
+            }
+        }
+
+        // Cek apakah user sudah login
+        window.onload = function() {
+            if (localStorage.getItem('isLoggedIn') === 'true') {
+                window.location.href = 'menu_utama.html';
+            }
+        };
+    </script>
+</body>
+</html>
