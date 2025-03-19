@@ -19,7 +19,7 @@ menuBtn.addEventListener('click', () => {
 
 
 // data point untuk akses materi
-let userPoints = 100
+let userPoints = 0
 const materiData = [
     {
         "file": "pretest.html",
@@ -92,7 +92,7 @@ function loadContent(page) {
             console.log(userPoints);
 
             // Tutup sidebar hanya jika dalam mode mobile (misalnya di bawah 768px)
-            if (window.innerWidth < 768 && isOpenSideBar) {
+            if (window.innerWidth < 960 && isOpenSideBar) {
                 isOpenSideBar = false;
                 sidebar.classList.remove('slide-in');
                 sidebar.classList.add('slide-out');
